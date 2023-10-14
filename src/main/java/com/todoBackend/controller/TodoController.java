@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin("localhost:4200")
+@CrossOrigin("http://localhost:4200")
 @Api(tags = "Todo App")
 public class TodoController {
 
@@ -27,6 +27,11 @@ public class TodoController {
         return todoRepository.findByUser(user);
     }
 
+    @GetMapping("/user/{username}/getTodoById/{id}")
+    public Todo getTodoById(@PathVariable("username") String username,
+                            @PathVariable("id") int id){
+        return todoRepository.findById(id).get();
+    }
     @PostMapping("/user/{username}/addTodo")
     public Todo addTodo(@PathVariable("username") String username,
                         @RequestBody Todo todo){
