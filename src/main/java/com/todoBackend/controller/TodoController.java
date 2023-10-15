@@ -4,7 +4,7 @@ import com.todoBackend.model.Todo;
 import com.todoBackend.model.User;
 import com.todoBackend.repository.TodoRepository;
 import com.todoBackend.repository.UserRepository;
-import io.swagger.annotations.Api;
+//import io.swagger.annotations.Api;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin("http://localhost:4200")
-@Api(tags = "Todo App")
+//@Api(tags = "Todo App")
 public class TodoController {
 
     @Autowired
